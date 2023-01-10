@@ -150,8 +150,10 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 \frametitle{Thrombolysis in subgroups of patients (predicted use in 10k cohort)}
 
 \begin{center}
-\includegraphics[width=0.69\textwidth]{./images/15c_modelled_subgroup_violin.jpg}
+\includegraphics[width=0.95\textwidth]{./images/15c_modelled_subgroup_violin.jpg}
 \end{center}
+
+\scriptsize An \emph{ideal patient} has: Stroke severity NIHSS in range 10-25, Arrival-to-scan time \textless{} 30 minutes, Stroke type = infarction, Precise onset time = True, Prior disability level (mRS) = 0, No use of AF anticoagulants, Onset-to-arrival time \textless{} 90 minutes, Age \textless{}80 years, Onset during sleep = False
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,29 +162,36 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 \frametitle{Thrombolysis in subgroups of patients (observed thrombolysis for each team)}
 
 \begin{center}
-\includegraphics[width=0.69\textwidth]{./images/15b_actual_subgroup_violin.jpg}
+\includegraphics[width=0.95\textwidth]{./images/15b_actual_subgroup_violin.jpg}
 \end{center}
+
+
+\scriptsize An \emph{ideal patient} has: Stroke severity NIHSS in range 10-25, Arrival-to-scan time \textless{} 30 minutes, Stroke type = infarction, Precise onset time = True, Prior disability level (mRS) = 0, No use of AF anticoagulants, Onset-to-arrival time \textless{} 90 minutes, Age \textless{}80 years, Onset during sleep = False
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{How would different teams respond to the same patient?}
+\frametitle{Thrombolysis in subgroups of patients (predicted use in 10k cohort)}
 
     \begin{center}
     \includegraphics[width=1.0\textwidth]{./images/15_10k_subgroup.jpg}
     \end{center}
+
+\footnotesize Note: Subgroups, other than \emph{ideal patients} tend to track each other.  
 
 \end{frame}
 
 
 
 \begin{frame}
-\frametitle{How would different teams respond to the same patient?}
+\frametitle{Thrombolysis in subgroups of patients (observed thrombolysis for each team)}
 
     \begin{center}
     \includegraphics[width=1.0\textwidth]{./images/15a_actual_subgroup.jpg}
     \end{center}
+
+\footnotesize Note: Subgroups, other than \emph{ideal patients} tend to track each other, but with more noise than predicted thrombolysis use. 
 
 \end{frame}
 
