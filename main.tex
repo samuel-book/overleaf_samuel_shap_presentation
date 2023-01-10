@@ -159,39 +159,32 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 \begin{frame}
 \frametitle{How would different teams respond to the same patient?}
 
-\begin{columns}% [T] % [T] Top aligns columns
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{./images/15_10k_subgroup.jpg}
+    \end{center}
 
-    \begin{column}{0.45\textwidth}
+\end{frame}
 
-        \begin{footnotesize}
-    
-        This patient has the characteristics of a generally patient well-suited to thrombolysis, except they have a mild stroke.
 
-        \vspace{3mm}
-        
 
-        \begin{itemize}
-            \item Onset-to-arrival = 80 mins
-            \item Arrival-to-scan = 20 mins
-            \item Infarction = Yes
-            \item Pre-stroke disability = 0
-            \item Stroke severity (NIHSS) = 5
-            \item Precise onset time = Yes
-            \item Use of AF anticoagulants = No
-            \item Onset during sleep = No
-            \item Age = 73
-        \end{itemize}
-        \end{footnotesize}
-        
-    \end{column}
-    
-    \begin{column}{0.55\textwidth}
-        \begin{center}
-        \includegraphics[width=1.0\textwidth]{./images/shap_waterfall_with_violin.jpg}
-        \end{center}
-    \end{column}
-    
-\end{columns}
+\begin{frame}
+\frametitle{How would different teams respond to the same patient?}
+
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{./images/15a_actual_subgroup.jpg}
+    \end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{How would different teams respond to the same patient?}
+
+    \begin{center}
+    \includegraphics[width=0.9\textwidth]{./images/shap_waterfall_with_violin.jpg}
+    \end{center}
 
 \end{frame}
 
