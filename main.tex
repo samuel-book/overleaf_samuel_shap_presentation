@@ -123,9 +123,66 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 \end{center}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}
+\frametitle{How general effects may be modified by individual hospitals}
 
+\begin{center}
+\includegraphics[width=0.80\textwidth]{./images/12aa_two_way_shap_adjustment.jpg}
+\end{center}
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Thrombolysis in subgroups of patients}
+
+\begin{center}
+\includegraphics[width=0.69\textwidth]{./images/15a_actual_vs_modelled_subgroup_violin.jpg}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{How would different tems response to the same patient?}
+
+\begin{columns}% [T] % [T] Top aligns columns
+
+    \begin{column}{0.45\textwidth}
+
+        \begin{footnotesize}
+    
+        This patient has the characteristics of a patient well-suited to thrombolysis, except they have a mild stroke.
+
+        \vspace{3mm}
+        
+
+        \begin{itemize}
+            \item Onset-to-arrival = 80 mins
+            \item Arrival-to-scan = 20 mins
+            \item Infarction = Yes
+            \item Pre-stroke disability = 0
+            \item Stroke severity (NIHSS) = 5
+            \item Precise onset time = Yes
+            \item Use of AF anticoagulants = No
+            \item Onset during sleep = No
+            \item Age = 73
+        \end{itemize}
+        \end{footnotesize}
+        
+    \end{column}
+    
+    \begin{column}{0.55\textwidth}
+        \begin{center}
+        \includegraphics[width=1.0\textwidth]{./images/shap_waterfall_with_violin.jpg}
+        \end{center}
+    \end{column}
+    
+\end{columns}
+
+\end{frame}
 \end{document}
 
 
