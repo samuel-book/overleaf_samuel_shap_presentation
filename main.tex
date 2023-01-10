@@ -126,6 +126,17 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
+\frametitle{Hospital SHAP predicts a hospital's predisposition to use thrombolysis}
+
+\begin{center}
+\includegraphics[width=1.0\textwidth]{./images/99_twin_correlation_scatter.jpg}
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
 \frametitle{How general effects may be modified by individual hospitals}
 
 \begin{center}
@@ -146,7 +157,7 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{How would different tems response to the same patient?}
+\frametitle{How would different teams respond to the same patient?}
 
 \begin{columns}% [T] % [T] Top aligns columns
 
@@ -154,7 +165,7 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 
         \begin{footnotesize}
     
-        This patient has the characteristics of a patient well-suited to thrombolysis, except they have a mild stroke.
+        This patient has the characteristics of a generally patient well-suited to thrombolysis, except they have a mild stroke.
 
         \vspace{3mm}
         
@@ -183,6 +194,37 @@ SHAP values show the influence of features (even for \emph{`black box'} models).
 \end{columns}
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary}
+\small
+
+\begin{itemize}
+    \item The XGBoost/SHAP model revealed that the odds of receiving thrombolysis:
+
+
+
+    \begin{itemize}
+        \item Reduced 20 fold over the first 100 minutes of arrival-to-scan time.
+        \item Varied 30 fold depending on stroke severity.
+        \item Reduced 3 fold with imprecise onset time.
+        \item Fell 5 fold with increasing pre-stroke disability
+        \item Varied 15 fold between hospitals. 
+    \end{itemize}
+
+\item The hospital identification (hospital SHAP value) explained 58\% of the variance in between-hospital thrombolysis use. 
+
+\item Compared with hospitals with higher thrombolysis use, hospitals with lower use were particularly less likely to give thrombolysis to patients with milder strokes, prior disability, or patients with imprecise onset time.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \end{document}
 
 
