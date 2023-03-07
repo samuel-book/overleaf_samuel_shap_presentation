@@ -27,20 +27,19 @@
     \insertframenumber/\inserttotalframenumber
 }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Title page
 
-\title{Stroke Audit Machine Learning (SAMueL)}
-\subtitle{Learnings from explainable machine learning}
+\title{What would other emergency stroke teams do?}
+\subtitle{Using explainable machine learning to understand variation in thrombolysis practice}
 
 
 \author{Kerry Pearn\inst{1}, Michael Allen\inst{1,3}, Anna Laws\inst{1}, Richard Everson\inst{3}, Martin James\inst{1,2} }
 \institute{\inst{1}University of Exeter Medical School \inst{2}Royal Devon University Healthcare NHS Foundation Trust \inst{3}University of Exeter Institute of Data Science and Artificial Intelligence}
 
 %\institute{Overleaf}
-\date{January 2023}
+%\date{March 2023}
 
 
 \begin{document}
@@ -50,128 +49,19 @@
 \begin{frame}
 \titlepage
 
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-\frametitle{Thrombolysis rates vary .... a lot}
-Here we show the range of thrombolysis use across the 132 acute stroke centres in England and Wales.
-\begin{center}
-\includegraphics[width=1.0\textwidth]{./images/thrombolysis_hist}
-\end{center}
-
-How much of this variation is due to differences in decisions hospitals make on who they would give thrombolysis to?
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Our Approach}
-
-\small
-
-\begin{itemize}
-    \item Train a machine learning algorithm to learn to predict to which patients each hospital would, or would not, give thrombolysis.
-    \item Identify the patient characteristics which are most important in predicting use of thrombolysis, and produce a simpler machine learning model based on these characteristics.
-    \item Identify \emph{ideal} candidates for thrombolysis.
-    \item Add an \emph{explainable machine learning} layer* to understand patterns of use of thrombolysis.
-    \item Investigate what we think would happen if every hospital received exactly the same 10k cohort of patients.
-    \item Identify key subgroups of patients where hospitals differ in their use of thrombolysis.
-\end{itemize}
-
-\vspace{3mm}
-\footnotesize
-*SHAP (Shapley Additive Values, which provide information on what contribution each patient characteristic makes to the final prediction of whether they will, or will not, receive thrombolysis).
-\end{frame}
+\include{slides/001_thrombolysis_variation}
+\include{slides/003_pathway}
+\include{slides/005_approach}
+\include{slides/010_ml_overview}
+\include{slides/015_model_accuracy_simplification}
+\include{slides/018_simplified_features}
+\include{slides/020_shap_waterfall}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Machine learning overview}
-\begin{center}
-\includegraphics[width=0.80\textwidth]{./images/ml_model_high_level}
-\end{center}
-
-\small
-Machine learning is based on the simple principle of recognising similarity to what has been seen before.
-\vspace{3mm}
-
-We accessed 246,676 emergency stroke admissions in England and Wales over three years. Our machine learning models use XGBoost classification, and are based on those 88,928 patients who arrive within 4 hours of known stroke onset. 
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Model accuracy, and simplification}
-
-A model with all available 84 features had an ROC AUC of 0.922. A model with 10 features had an ROC AUC of 0.919.
-
-\begin{center}
-\includegraphics[width=0.9\textwidth]{./images/01_feature_selection.jpg}
-\end{center}
-
-Our simpler machine learning model will just use these 10 features.
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{What do the most thrombolysable patients look like?}
-
-\scriptsize For each hospital we identify the patient with the highest probability of receiving thrombolysis. Here we compare the range of feature values for these 'Most thrombolysable' patients with 1) All patients, 2) Thrombolysed patients, and 3) Non-thrombolysed patients.
-
-
-\begin{center}
-\includegraphics[width=0.63\textwidth]{./images/02a_most_thrombolsyable_violin.jpg}
-\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{What do the most thrombolysable patients look like?}
-
-Compared with other patients, the  most thrombolysable patients:
-
-\vspace{3mm}
-
-\begin{itemize}
-\item Had shorter arrrival-to-scan times
-\item Had an infarction stroke type
-\item Had stroke severity with NIHSS 5-25
-\item Had a precise onset time
-\item Had lower pre-stroke disability
-\item Were not taking anticoagulant medication
-\item Had shorter onset-to-arrival times
-\item Did not have onset during sleep
-\item Were younger
-\end{itemize}
-
-\vspace{3mm}
-
-But, can we learn to be more \emph{quantitative} than this?
-
-\end{frame}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Explaining model predictions with SHAP values}
-
-SHAP values show the influence of features (even for \emph{`black box'} models).
-
-\begin{center}
-\includegraphics[width=0.90\textwidth]{./images/waterfall.jpg}
-\end{center}
-\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
