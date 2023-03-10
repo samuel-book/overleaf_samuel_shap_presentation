@@ -3,14 +3,19 @@
 
 The XGBoost/SHAP model revealed that the odds of receiving thrombolysis:
 
-\vspace{3mm}
+\vspace{2mm}
 
 \begin{itemize}
+    \setlength{\itemsep}{1.5mm}
     \item Reduced 20 fold over the first 100 minutes of arrival-to-scan time.
     \item Varied 30 fold depending on stroke severity.
     \item Reduced 3 fold with imprecise onset time.
     \item Fell 5 fold with increasing pre-stroke disability.
     \item Varied 15 fold between hospitals. 
+    \item Fell 5 fold if the patient was taking anticoagulant medication.
+    \item Was stable for the first two hours of arrival-to-onset time,and then fell 3 fold between two and four hours arrival-to-onset time
+    \item Fell 2 fold between the age of 80 and 110.
+    \item Fell 4 fold if onset was during sleep (these patients will also have the reduction due to imprecise onset time). 
 \end{itemize}
 
 \end{frame}
