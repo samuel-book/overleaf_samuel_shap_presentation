@@ -1,0 +1,28 @@
+
+\begin{frame}
+\frametitle{Summary}
+\small
+
+\begin{itemize}
+    \item The XGBoost/SHAP model revealed that the odds of receiving thrombolysis:
+    
+    \begin{itemize}
+        \scriptsize
+        \item Reduced 20 fold over the first 100 minutes of arrival-to-scan time
+        \item Varied 30 fold depending on stroke severity
+        \item Reduced 3 fold with imprecise onset time
+        \item Fell 5 fold with increasing pre-stroke disability
+        \item Varied 15 fold between hospitals.
+        \item Fell 5 fold if the patient was taking anticoagulant medication
+        \item Fell 3 fold between two and four hours arrival-to-onset time
+        \item Fell 2 fold between the age of 80 and 110
+        \item Fell 4 fold if onset was during sleep
+    \end{itemize}
+
+\small
+\item The hospital identification (hospital SHAP value) explained 58\% of the variance in between-hospital thrombolysis use. 
+
+\item Hospitals with lower thrombolysis use were particularly less likely to give thrombolysis to patients with milder strokes, prior disability, or patients with imprecise onset time.
+\end{itemize}
+
+\end{frame}
