@@ -1,12 +1,18 @@
-
-
 \begin{frame}
 \frametitle{Benchmark thrombolysis decisions}
+
+For each hospital we use the machine learning model to predict whether each of their patients would receive thrombolysis at 25 hospitals who have the highest modelled predisposition to use thrombolysis. We take a majority vote of those 25 hospitals to identify a \emph{benchmark} decision.\\
+
+\vspace{3mm}
+
+The \emph{benchmark} thrombolysis rate provides a potential thrombolysis rate for each hospital (of those patients arriving in 4 hours of known onset) that takes into account each hospital's own patient mix.
+
+\vspace{3mm}
 
 
 \begin{table}[]
 \begin{tabular}{rrr}
-                            & actual & benchmark \\
+                            & observed & benchmark \\
 \hline
 Worthing                    & 0.34   & 0.30      \\
 St Richards                 & 0.28   & 0.29     \\
