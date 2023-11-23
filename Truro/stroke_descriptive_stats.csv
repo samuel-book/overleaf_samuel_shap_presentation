@@ -1,0 +1,24 @@
+,All England & Wales (2016 to 2021),Royal Cornwall Hospital (2016 to 2021),Derriford Hospital (2016 to 2021),Torbay Hospital (2016 to 2021),Royal Devon and Exeter Hospital (2016 to 2021),North Devon District Hospital (2016 to 2021)
+count,282302,2571,3276,1764,2657,1819
+age,75.572,76.183,76.097,77.738,78.07,77.396
+male,0.515,0.517,0.511,0.516,0.479,0.487
+infarction,0.867,0.844,0.844,0.841,0.872,0.902
+stroke_severity,8.088,8.553,7.54,7.532,8.423,7.548
+onset_to_arrival_time,164.0,158.0,185.0,240.0,186.0,168.0
+onset_known,0.705,0.579,0.773,0.985,0.804,0.628
+arrive_in_4_hours,0.437,0.388,0.45,0.494,0.469,0.402
+precise_onset_known,0.362,0.32,0.434,0.43,0.382,0.51
+onset_during_sleep,0.137,0.072,0.107,0.177,0.201,0.121
+afib_anticoagulant,0.188,0.198,0.203,0.206,0.2,0.201
+prior_disability,1.159,1.267,0.995,1.176,1.376,1.614
+prestroke_mrs_0-2,0.78,0.791,0.796,0.744,0.731,0.676
+arrival_to_scan_time,42.0,16.0,23.0,37.0,50.0,77.0
+thrombolysis,0.134,0.094,0.119,0.104,0.123,0.085
+scan_to_thrombolysis_time,30.0,41.0,32.0,43.0,28.0,40.0
+death,0.168,0.253,0.184,0.255,0.212,0.162
+discharge_disability,2.92,2.928,2.851,3.253,3.13,2.726
+increased_disability_due_to_stroke,1.761,1.66,1.857,2.077,1.753,1.112
+mrs_5-6,0.235,0.306,0.325,0.326,0.272,0.218
+mrs_0-2,0.456,0.547,0.478,0.439,0.432,0.48
+stroke_team,All England & Wales,Royal Cornwall Hospital,Derriford Hospital,Torbay Hospital,Royal Devon and Exeter Hospital,North Devon District Hospital
+year,2016 to 2021,2016 to 2021,2016 to 2021,2016 to 2021,2016 to 2021,2016 to 2021
